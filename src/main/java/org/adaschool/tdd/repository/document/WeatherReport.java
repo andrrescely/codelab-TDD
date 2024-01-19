@@ -24,7 +24,7 @@ public class WeatherReport
 
     Date created;
 
-    public WeatherReport( GeoLocation geoLocation, double temperature, double humidity, String reporter, Date created )
+    public WeatherReport(GeoLocation geoLocation, double temperature, double humidity, String reporter, Date date)
     {
         this.geoLocation = geoLocation;
         this.temperature = temperature;
@@ -71,8 +71,8 @@ public class WeatherReport
         }
         WeatherReport that = (WeatherReport) o;
         return Double.compare( that.temperature, temperature ) == 0 && Double.compare( that.humidity, humidity ) == 0
-            && Objects.equals( id, that.id ) && Objects.equals( geoLocation, that.geoLocation ) && Objects.equals(
-            reporter, that.reporter ) && Objects.equals( created, that.created );
+                && Objects.equals( id, that.id ) && Objects.equals( geoLocation, that.geoLocation ) && Objects.equals(
+                reporter, that.reporter ) && Objects.equals( created, that.created );
     }
 
     @Override

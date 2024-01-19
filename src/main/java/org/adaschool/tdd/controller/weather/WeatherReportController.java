@@ -39,8 +39,7 @@ public class WeatherReportController
 
     @PostMapping( "/nearby" )
     public List<WeatherReport> findNearByReports( @RequestBody NearByWeatherReportsQueryDto query )
-    {
-        return weatherService.findNearLocation( query.getGeoLocation(), query.getDistanceRangeInMeters() );
+    {return weatherService.findNearLocation( query.getGeoLocation(), query.getDistanceRangeInMeters() );
     }
 
     @GetMapping( "reporter/{id}" )
